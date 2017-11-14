@@ -8,10 +8,10 @@ html {
     height: 100%;
     padding: 0;
     margin: 0 auto;
-    font-size: $main_font_size;
-    font-family: $main_font_family, 'Helvetica', 'Arial', sans-serif;
+    font-size: $font_size;
+    font-family: $font_main, 'Helvetica', 'Arial', sans-serif;
     line-height: $line_height;
-    color: $main_font_color;
+    color: $font_color;
     background: $bg_color;
   }
 }
