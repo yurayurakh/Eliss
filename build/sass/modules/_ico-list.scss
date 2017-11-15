@@ -1,0 +1,27 @@
+.ico__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .ico__item {
+    display: flex;
+    width: 28%;
+    margin-bottom:80px;
+    &:nth-child(2), &:nth-child(3n+2) {
+      margin: 0 0 0 2%;
+    }
+    &_img {
+      margin-right: 20px;
+    }
+    &_title {
+      font-size: 18px;
+      text-transform: uppercase;
+      font-family: $font_bold;
+      letter-spacing: $letter_spacing;
+      margin-bottom: 20px;
+    }
+    &_text {
+      color: #9c9c9c;
+      line-height: 24px;
+    }
+  }
+}

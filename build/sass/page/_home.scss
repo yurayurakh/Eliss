@@ -1,5 +1,8 @@
 .home {
+
+  //Information block
   &__information-brain {
+    margin-top: 10px;
     margin-bottom: 160px;
     .information-block__img {
       margin-right: 50px;
@@ -19,6 +22,20 @@
     .information-block__img {
       margin-left: 120px;
       margin-right: 60px;
+    }
+  }
+
+  //Ico block
+  .home__ico {
+    padding-bottom: 90px;
+    &_sub-title {
+      margin-bottom: 80px;
+      .information-block__text {
+        text-align: center;
+      }
+    }
+    .ico__btn {
+      text-align: center;
     }
   }
 }

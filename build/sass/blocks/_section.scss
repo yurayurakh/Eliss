@@ -1,7 +1,16 @@
 .section {
-  padding: 120px 0;
   background: $bg_color;
+}
+
+.dark-section {
+
+  color: #ffffff;
+  background: #1c1c1e;
+}
+
+.section, .dark-section {
+  padding: 120px 0;
   .title-block {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 }

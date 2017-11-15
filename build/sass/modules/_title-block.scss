@@ -6,6 +6,7 @@
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 50px;
+    letter-spacing: $letter_spacing;
     &:after {
       content: "";
       position: absolute;
