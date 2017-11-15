@@ -1,0 +1,8 @@
+.information-block {
+  display: flex;
+  justify-content: space-between;
+  &__text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

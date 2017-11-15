@@ -1,0 +1,18 @@
+.link {
+  position: relative;
+  color: #735dff;
+  text-transform: uppercase;
+  font-family: $font_bold;
+  letter-spacing: 2px;
+  padding-right: 40px;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+    width: 21px;
+    height: 16px;
+    background: url("../img/link-arrow.png") center no-repeat;
+  }
+}

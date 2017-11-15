@@ -1,0 +1,24 @@
+.home {
+  &__information-brain {
+    margin-bottom: 160px;
+    .information-block__img {
+      margin-right: 50px;
+    }
+    .information-block__text {
+      margin-top: 40px;
+    }
+  }
+  &__information-why-work {
+    .information-block__text {
+      text-align: right;
+      margin-left: 60px;
+      p {
+        margin-bottom: 30px;
+      }
+    }
+    .information-block__img {
+      margin-left: 120px;
+      margin-right: 60px;
+    }
+  }
+}

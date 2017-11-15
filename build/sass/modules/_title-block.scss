@@ -1,0 +1,25 @@
+.title-block {
+  h2,h3,h4 {
+    position: relative;
+    font-size: 36px;
+    font-family: $font_bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 3px;
+      width: 70px;
+      background: $gradient;
+    }
+    span {
+      font-family: $font_light;
+      font-weight: 100;
+    }
+  }
+}
