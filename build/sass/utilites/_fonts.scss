@@ -4,6 +4,8 @@ $font_main: "RobotoRegular";
 $font_bold: "RobotoBold";
 $font_light: "RobotoLight";
 $font_medium: "RobotoMedium";
+$font_italic: "RobotoItalic";
+$font_boldItalic: "RobotoBoldItalic";
 $line_height: 1;
 
 
@@ -44,6 +46,26 @@ $line_height: 1;
   src: url("../fonts/Roboto/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
   url("../fonts/Roboto/RobotoBold/RobotoBold.woff") format("woff"),
   url("../fonts/Roboto/RobotoBold/RobotoBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "RobotoItalicBold";
+  //src: url("../fonts/Roboto/RobotoBoldItalic/RobotoBoldItalic.eot");
+  src: url("../fonts/Roboto/RobotoBoldItalic/RobotoBoldItalic.woff") format("woff"),
+       url("../fonts/Roboto/RobotoBoldItalic/RobotoBoldItalic.woff2") format("woff2"),
+  url("../fonts/Roboto/RobotoBoldItalic/RobotoBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "RobotoItalic";
+  //src: url("../fonts/Roboto/RobotoItalic/RobotoItalic.eot");
+  src: url("../fonts/Roboto/RobotoItalic/RobotoItalic.woff") format("woff"),
+       url("../fonts/Roboto/RobotoItalic/RobotoItalic.woff2") format("woff2"),
+  url("../fonts/Roboto/RobotoItalic/RobotoItalic.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }

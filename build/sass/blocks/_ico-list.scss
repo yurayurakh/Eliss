@@ -4,11 +4,8 @@
   flex-wrap: wrap;
   .ico__item {
     display: flex;
-    width: 28%;
+    max-width: 330px;
     margin-bottom:80px;
-    &:nth-child(2), &:nth-child(3n+2) {
-      margin: 0 0 0 2%;
-    }
     &_img {
       margin-right: 20px;
     }
