@@ -1,0 +1,116 @@
+.footer {
+  padding: 50px 0;
+  color: #ffffff;
+  background: #141623 url("../img/bg_footer.jpg") bottom no-repeat;
+  .brands {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    &__item {
+      margin-bottom: 40px;
+      width: 295px;
+      text-align: center;
+      opacity: .5;
+      &:hover {
+        transition: opacity .4s ease;
+        opacity: 1;
+      }
+    }
+  }
+  .news {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    .subscribe {
+      max-width: 470px;
+      .information-block {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+      &-form {
+        display: flex;
+        &__field {
+          position: relative;
+          display: inline-block;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -14px;
+            left: 18px;
+            height: 28px;
+            width: 30px;
+            background: url('../img/icon/icon_message.png') center no-repeat;
+          }
+        }
+        &__input {
+          width: 370px;
+          position: relative;
+          height: 60px;
+          line-height: 60px;
+          border: none;
+          background: rgba(255,255,255,.1);
+          border-radius: 5px;
+          outline: none;
+          padding: 0 10px 0 68px;
+          margin-right: 10px;
+          color: #ffffff;
+          font-size: 18px;
+          box-sizing: border-box;
+          &::-webkit-input-placeholder {
+            color: #ffffff;
+          }
+        }
+        &__btn {
+          position: relative;
+          height: 60px;
+          width: 60px;
+          line-height: 60px;
+          border: none;
+          background: $gradient;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover {
+            background: $gradient-revert;
+          }
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+          }
+        }
+      }
+    }
+    .social {
+      display: flex;
+      justify-content: space-between;
+      max-width: 470px;
+      &__item {
+        margin-left: 15px;
+        opacity: 1;
+        &:hover {
+          transition: opacity .4s ease;
+          opacity: .7;
+        }
+      }
+    }
+  }
+  &__nav {
+    margin-top: 90px;
+  }
+  .copyright {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .copyright-police {
+    text-transform: uppercase;
+  }
+}

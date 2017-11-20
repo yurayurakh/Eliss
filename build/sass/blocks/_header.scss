@@ -3,4 +3,7 @@
   top: 0;
   width: 100%;
   background: rgba(0,0,0,.5);
+  .nav__list {
+    justify-content: flex-end;
+  }
 }
