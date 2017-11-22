@@ -1,0 +1,18 @@
+.page-title {
+  background: url("../img/bg_title-page.jpg") top center no-repeat;
+  padding: 130px 0 110px;
+  .title {
+    text-align: center;
+    h2 {
+      color: #ffffff;
+      font-size: 48px;
+      font-family: $font_bold;
+      span {
+        font-family: $font_light;
+      }
+    }
+  }
+  .sub-title {
+    justify-content: center;
+  }
+}

@@ -1,11 +1,11 @@
 .what_eliss-section {
-  background: url("../img/bg_what-eliss.jpg") top center no-repeat;
-  background-size: cover;
+  background: #1c1c1e url("../img/bg_what-eliss.jpg") top center no-repeat;
+  background-size: contain;
   padding-top: 200px;
-  height: 1000px;
+  height: 1600px;
+  color: #ffffff;
   .main-title {
     text-align: center;
-    color: #ffffff;
     font-size: 100px;
     font-family: $font_bold;
     text-transform: uppercase;
@@ -13,12 +13,56 @@
   }
   .main-sub_title {
     text-align: center;
-    color: #ffffff;
     font-family: $font_light;
     font-size: 30px;
     font-weight: 100;
+    margin-bottom: 400px;
     span {
       font-family: $font_bold;
+    }
+  }
+  .world {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    .canvas {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left:0;
+      top:0;
+    }
+    &-planet {
+      z-index: 10;
+      width: 590px;
+    }
+    &-info {
+      z-index: 10;
+      width: 590px;
+      .title-block {
+        h2 {
+          padding-bottom: 30px;
+          text-align: left;
+          margin-bottom: 20px;
+          &:after {
+            margin-left: 0;
+          }
+        }
+      }
+      .information-block {
+        display: flex;
+        flex-direction: column;
+        &__text {
+          p {
+            margin-bottom: 30px;
+          }
+        }
+      }
+      .world-btn {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
     }
   }
 }

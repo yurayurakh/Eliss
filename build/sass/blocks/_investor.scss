@@ -1,0 +1,83 @@
+//investor
+.investor {
+  .information-block__text {
+    width: 50%;
+    text-align: left;
+    margin-left: 70px;
+    p {
+      margin-bottom: 30px;
+    }
+    .link:hover {
+
+    }
+  }
+  .information-block__btn {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    .btn {
+      //max-width: 340px;
+    }
+  }
+}
+
+
+//Steps investor page
+.investor__steps {
+  padding: 0 70px;
+  .investor__step {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+    &_img {
+      position: relative;
+      width: 250px;
+      margin-right: 40px;
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+    &_detail {
+      max-width: 600px;
+    }
+    &_title {
+      font-family: $font_bold;
+      font-size: 36px;
+      text-transform: uppercase;
+      letter-spacing: $letter_spacing;
+      margin-bottom: 20px;
+    }
+    &_sub-title {
+      position: relative;
+      font-size: 24px;
+      font-family: $font_light;
+      text-transform: uppercase;
+      letter-spacing: $letter_spacing;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        height: 5px;
+        width: 70px;
+        background: $gradient;
+      }
+    }
+    &_text {
+      font-size: 18px;
+      line-height: 30px;
+      color: #1c1c1e;
+      margin-bottom: 30px;
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
