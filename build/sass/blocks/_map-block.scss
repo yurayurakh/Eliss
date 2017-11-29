@@ -2,12 +2,15 @@
   .map {
     text-align: center;
     margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
   }
   .map__list {
     display: flex;
     justify-content: center;
 
     .map__item {
+      cursor: pointer;
       width: 160px;
       margin-left: 20px;
       &_icon {
@@ -144,6 +147,15 @@
           }
         }
       }
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .circle__item {
+      opacity: .5;
+    }
+    .step__active {
+      opacity: 1;
     }
   }
 }

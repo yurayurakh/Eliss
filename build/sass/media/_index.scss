@@ -1,5 +1,26 @@
 // Adaptive
-@media (min-width:1200px) and (max-width:1440px) {
+
+@media (min-width:1921px) {
+  .home {
+    .what_eliss-section {
+      .main-sub_title {
+        margin-bottom: 50vh;
+      }
+    }
+  }
+}
+
+@media (min-width:1440px) and (max-width:1920px) {
+  .home {
+    .what_eliss-section {
+      .main-sub_title {
+        margin-bottom: 40vh;
+      }
+    }
+  }
+}
+
+@media (min-width:1200px) and (max-width:1439px) {
 
 }
 @media (min-width:992px) and (max-width:1199px) {

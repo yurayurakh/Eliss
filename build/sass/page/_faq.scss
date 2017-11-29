@@ -5,7 +5,6 @@
     margin-bottom: 40px;
     .question {
       position: relative;
-      margin-bottom: 30px;
       font-family: $font_bold;
       font-size: 21px;
       cursor: pointer;
@@ -34,7 +33,7 @@
     .answer {
       line-height: 30px;
       p {
-        margin-bottom: 25px;
+        margin-top: 25px;
       }
     }
   }

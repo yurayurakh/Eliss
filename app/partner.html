@@ -8,6 +8,13 @@
     <title>Eliss</title>
 
 
+    <!-- Map Style -->
+
+    <link rel="stylesheet" href="lib/manifest-map/dist/jqvmap.min.css">
+
+    <!-- Animate css -->
+    <link rel="stylesheet" href="lib/animate.css/animate.min.css">
+
     <!-- Normalize -->
     <link rel="stylesheet" href="lib/normalize-css/normalize.css">
 
@@ -80,11 +87,12 @@
                     </div>
                     <div class="information-block">
                         <div class="information-block__text">
-                            С помощью ELISS, вы можете зарабатывать, не инвестируя ни цента. Активируйте ELISS в Telegram и создайте свою партнерскую сеть, которая будет приносить вам постоянную прибыль.
+                            Вы можете стать частью команды ELISS, и привлекать новые инвестиции.
+                            Приглашайте партнеров с помощью вашей партнерской ссылки и получайте 10% прибыли от их инвестиций.
                         </div>
                     </div>
                     <div class="partner_us">
-                        <div class="partner__item partner_you">
+                        <div class="partner__item partner_you wow fadeInLeft" data-wow-delay="0s" data-wow-offset="30">
                             <div class="partner__item_img">
                                 <img src="img/partner_you.png" alt="partner_you">
                             </div>
@@ -92,7 +100,7 @@
                                 ВЫ
                             </div>
                         </div>
-                        <div class="partner__item partner_profit">
+                        <div class="partner__item partner_profit wow fadeInDown" data-wow-delay="0.5s" data-wow-offset="10">
                             <div class="partner__item_img">
                                 <img src="img/profit.png" alt="profit">
                             </div>
@@ -100,11 +108,11 @@
                                 Прибыль 10%
                             </div>
                             <div class="partner__item_text">
-                                с каждой <br>
+                                с каждой </br>
                                 инвестиции
                             </div>
                         </div>
-                        <div class="partner__item partner_your">
+                        <div class="partner__item partner_your wow fadeInRight" data-wow-delay="1s" data-wow-offset="30">
                             <div class="partner__item_img">
                                 <img src="img/partner_your.png" alt="partner_your">
                             </div>
@@ -120,6 +128,7 @@
             </div>
         </div>
         <div class="dark-section investor">
+            <div id="particles-js3" class="partical"></div>
             <div class="container">
                 <div class="title-block">
                     <h2>
@@ -155,7 +164,7 @@
                     </div>
                 </div>
                 <div class="cart__list">
-                    <div class="cart__item">
+                    <div class="cart__item wow fadeInLeft" data-wow-delay="0.2s" data-wow-offset="30">
                         <div class="cart__item_img">
                             <img src="img/cart-bitcoin1.png" alt="cart-bitcoin1">
                         </div>
@@ -167,7 +176,7 @@
                             Вы <span>в любой момент</span> можете <span>выйти из крауд сейла,</span> продав ваши токены.
                         </div>
                     </div>
-                    <div class="cart__item">
+                    <div class="cart__item wow fadeInRight" data-wow-delay="0.2s" data-wow-offset="30">
                         <div class="cart__item_img">
                             <img src="img/cart-incentive.png" alt="cart-incentive">
                         </div>
@@ -281,8 +290,23 @@
     </footer>
 </div>
 
-<!-- Scripts -->
-<script src="lib/jquery/dist/jquery.min.js"></script>
-<script src="js/common.js"></script>
+    <!-- Scripts -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <!-- Wow js -->
+    <script src="lib/wow/dist/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- Particles js-->
+    <script src="lib/particles.js/particles.js"></script>
+    <script>
+        particlesJS.load('particles-js3', '/lib/particles.js/particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+
 </body>
 </html>

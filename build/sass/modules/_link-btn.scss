@@ -21,7 +21,7 @@
   position: relative;
   display: inline-block;
   padding: 0 40px 0 80px;
-  background: $gradient;
+  background-image: $gradient-btn;
   color: #ffffff;
   font-size: 18px;
   line-height: 60px;
@@ -30,6 +30,8 @@
   height: 60px;
   border-radius: 30px;
   letter-spacing: $letter_spacing;
+  box-shadow: 0 5px 20px rgba(91,189,255,.4);
+  background-size: 200% auto;
   &:before {
     content: "";
     position: absolute;
@@ -41,8 +43,10 @@
     background: url("../img/icon/icon_off.png") center no-repeat;
   }
   &:hover {
+    transition: all .7s ease;
+    box-shadow: 0 0 40px rgba(211,65,173,.7);
     color: #ffffff;
-    background: $gradient-revert;
+    background-position: right center;
   }
 }
 
@@ -50,7 +54,7 @@
   position: relative;
   display: inline-block;
   padding: 0 40px 0 80px;
-  background: transparent;
+  background-color: transparent;
   color: #ffffff;
   font-size: 18px;
   line-height: 60px;
@@ -70,10 +74,14 @@
     width: 19px;
     height: 25px;
     background: url("../img/icon/icon_pdf.png") center no-repeat;
+
   }
   &:hover {
-    transition: backgroud-color .3s ease;
+    transition: all .5s ease;
     color: $font_color;
-    background: darken(#ffffff, 25%);
+    background-color: darken(#ffffff, 25%);
+    &:before {
+      background: url("../img/icon/icon_pdf2.png") center no-repeat;
+    }
   }
 }

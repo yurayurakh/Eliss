@@ -1,7 +1,8 @@
 .footer {
   padding: 50px 0;
   color: #ffffff;
-  background: #141623 url("../img/bg_footer.jpg") bottom no-repeat;
+  background: url("../img/footer-particle.png") bottom left,
+              #141623 url("../img/bg_footer2.jpg") bottom no-repeat;
   .brands {
     margin-top: 50px;
     display: flex;
@@ -72,11 +73,13 @@
           width: 60px;
           line-height: 60px;
           border: none;
-          background: $gradient;
+          background-image: $gradient-btn;
           border-radius: 5px;
           cursor: pointer;
+          background-size: 200% auto;
           &:hover {
-            background: $gradient-revert;
+            transition: all .7s ease;
+            background-position: right center;
           }
           img {
             position: absolute;

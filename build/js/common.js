@@ -1,41 +1,27 @@
+var question = (function () {
 
-var startAnimation = (function () {
+    var questionAn = function () {
+        // Hidden Answer in the Question Block
+        $('.hides-answer').hide();
 
-    setTimeout(function () {
+        // Click by Question Item
+        $('.question').click(function(){
+            $(this).toggleClass('question-open').next().stop(true,true).slideToggle(300);
+            return false;
+        });
+    };
 
-        alert("start");
-
-    }, 2000);
-
-    return {
-        init: function () {
-            console.log('Init startAnimation');
-            startAnimation();
-        }
-    }
-})();
-
-var qestion = (function () {
-    // Hidden Answer in the Question Block
-    $('.hides-answer').hide();
-
-    // Click by Question Item
-    $('.question').click(function(){
-        $(this).toggleClass('question-open').next().stop(true,true).slideToggle(300);
-        return false;
-    });
 
     return {
         init: function () {
-            console.log('Init qestion');
-            qestion();
+            console.log('Init question');
+            questionAn();
         }
     }
 })();
 
 (function main() {
     $(document).ready(function () {
-        qestion.init();
-        startAnimation.init();
+        question.init();
     });
 })();

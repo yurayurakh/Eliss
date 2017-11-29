@@ -1,9 +1,10 @@
 .section {
   background: $bg_color;
+  position: relative;
 }
 
 .dark-section {
-
+  position: relative;
   color: #ffffff;
   background: #1c1c1e;
 }

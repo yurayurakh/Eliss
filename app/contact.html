@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eliss</title>
 
+    <!-- Animate css -->
+    <link rel="stylesheet" href="lib/animate.css/animate.min.css">
 
     <!-- Normalize -->
     <link rel="stylesheet" href="lib/normalize-css/normalize.css">
@@ -86,7 +88,7 @@
             </div>
             <div class="container">
                 <div class="contact__list">
-                    <div class="contact__item">
+                    <div class="contact__item wow zoomIn" data-wow-delay="0.2s" data-wow-offset="30">
                         <div class="contact__item_img">
                             <img src="img/email.png" alt="email">
                         </div>
@@ -113,7 +115,7 @@
                             Партнерство
                         </div>
                     </div>
-                    <div class="contact__item">
+                    <div class="contact__item wow zoomIn" data-wow-delay="0.2s" data-wow-offset="30">
                         <div class="contact__item_img">
                             <img src="img/contact_telegram.png" alt="contact_telegram">
                         </div>
@@ -232,8 +234,14 @@
         </footer>
     </div>
 
-<!-- Scripts -->
-<script src="lib/jquery/dist/jquery.min.js"></script>
-<script src="js/common.js"></script>
+    <!-- Scripts -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <!-- Wow js -->
+    <script src="lib/wow/dist/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>

@@ -1,160 +1,156 @@
+var question = (function () {
 
-var startAnimation = (function () {
+    var questionAn = function () {
+        // Hidden Answer in the Question Block
+        $('.hides-answer').hide();
 
-    setTimeout(function () {
+        // Click by Question Item
+        $('.question').click(function(){
+            $(this).toggleClass('question-open').next().stop(true,true).slideToggle(300);
+            return false;
+        });
+    };
 
-        alert("start");
-
-    }, 2000);
-
-    return {
-        init: function () {
-            console.log('Init startAnimation');
-            startAnimation();
-        }
-    }
-})();
-
-var qestion = (function () {
-    // Hidden Answer in the Question Block
-    $('.hides-answer').hide();
-
-    // Click by Question Item
-    $('.question').click(function(){
-        $(this).toggleClass('question-open').next().stop(true,true).slideToggle(300);
-        return false;
-    });
 
     return {
         init: function () {
-            console.log('Init qestion');
-            qestion();
+            console.log('Init question');
+            questionAn();
         }
     }
 })();
 
 (function main() {
     $(document).ready(function () {
-        qestion.init();
-        startAnimation.init();
+        question.init();
     });
 })();
-$(function(){
-    var canvas = document.querySelector('canvas'),
-        ctx = canvas.getContext('2d'),
-        color = 'rgba(255,255,255,.2)';
-    canvas.width = window.innerWidth;
-    canvas.height = 800;
-    canvas.style.display = 'block';
-    ctx.fillStyle = color;
-    ctx.lineWidth = 0.1;
-    ctx.strokeStyle = color;
 
-    var mousePosition = {
-        x: 10 * canvas.width / 100,
-        y: 10 * canvas.height / 100
-    };
-
-    var dots = {
-        nb: 50,
-        distance: 150,
-        d_radius: 300,
-        array: []
-    };
-
-    function Dot(){
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-
-        this.vx = -.5 + Math.random();
-        this.vy = -.5 + Math.random();
-
-        this.radius = Math.random();
-    }
-
-    Dot.prototype = {
-        create: function(){
-            ctx.beginPath();
-            //ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-            polygon(ctx, this.x,this.y,10,6,-Math.PI/2);
-            ctx.fill();
-            ctx.stroke()
-        },
-
-        animate: function(){
-            for(i = 0; i < dots.nb; i++){
-
-                var dot = dots.array[i];
-
-                if(dot.y < 0 || dot.y > canvas.height){
-                    dot.vx = dot.vx;
-                    dot.vy = - dot.vy;
-                }
-                else if(dot.x < 0 || dot.x > canvas.width){
-                    dot.vx = - dot.vx;
-                    dot.vy = dot.vy;
-                }
-                dot.x += dot.vx;
-                dot.y += dot.vy;
-            }
-        },
-
-        line: function(){
-            for(i = 0; i < dots.nb; i++){
-                for(j = 0; j < dots.nb; j++){
-                    i_dot = dots.array[i];
-                    j_dot = dots.array[j];
-
-                    if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
-                        if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
-                            ctx.beginPath();
-                            ctx.moveTo(i_dot.x, i_dot.y);
-                            ctx.lineTo(j_dot.x, j_dot.y);
-                            ctx.stroke();
-                            ctx.closePath();
-                        }
-                    }
-                }
-            }
-        }
-    };
-
-    function polygon(ctx, x, y, radius, sides, startAngle, anticlockwise) {
-        if (sides < 3) return;
-        var a = (Math.PI * 2)/sides;
-        a = anticlockwise?-a:a;
-        ctx.save();
-        ctx.translate(x,y);
-        ctx.rotate(startAngle);
-        ctx.moveTo(radius,0);
-        for (var i = 1; i < sides; i++) {
-            ctx.lineTo(radius*Math.cos(a*i),radius*Math.sin(a*i));
-        }
-        ctx.closePath();
-        ctx.restore();
-    }
-    function createDots(){
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for(i = 0; i < dots.nb; i++){
-            dots.array.push(new Dot());
-            dot = dots.array[i];
-
-            dot.create();
-        }
-
-        dot.line();
-        dot.animate();
-    }
-
-    $('canvas').on('mousemove mouseleave', function(e){
-        if(e.type == 'mousemove'){
-            mousePosition.x = e.pageX;
-            mousePosition.y = e.pageY;
-        }
-        if(e.type == 'mouseleave'){
-            mousePosition.x = canvas.width / 2;
-            mousePosition.y = canvas.height / 2;
-        }
+;(function($){
+    $(window).on("load",function(){
+        $(document).scrollzipInit();
+        $(document).rollerInit();
     });
-    setInterval(createDots, 1000/30);
-});
+    $(window).on("load scroll resize", function(){
+        $('.numscroller').scrollzip({
+            showFunction    :   function() {
+                numberRoller($(this).attr('data-slno'));
+            },
+            wholeVisible    :     false,
+        });
+    });
+    $.fn.scrollzipInit=function(){
+        $('body').prepend("<div style='position:fixed;top:0px;left:0px;width:0;height:0;' id='scrollzipPoint'></div>" );
+    };
+    $.fn.rollerInit=function(){
+        var i=0;
+        $('.numscroller').each(function() {
+            i++;
+            $(this).attr('data-slno',i);
+            $(this).addClass("roller-title-number-"+i);
+        });
+    };
+    $.fn.scrollzip = function(options){
+        var settings = $.extend({
+            showFunction    : null,
+            hideFunction    : null,
+            showShift       : 0,
+            wholeVisible    : false,
+            hideShift       : 0,
+        }, options);
+        return this.each(function(i,obj){
+            $(this).addClass('scrollzip');
+            if ( $.isFunction( settings.showFunction ) ){
+                if(
+                    !$(this).hasClass('isShown')&&
+                    ($(window).outerHeight()+$('#scrollzipPoint').offset().top-settings.showShift)>($(this).offset().top+((settings.wholeVisible)?$(this).outerHeight():0))&&
+                    ($('#scrollzipPoint').offset().top+((settings.wholeVisible)?$(this).outerHeight():0))<($(this).outerHeight()+$(this).offset().top-settings.showShift)
+                ){
+                    $(this).addClass('isShown');
+                    settings.showFunction.call( this );
+                }
+            }
+            if ( $.isFunction( settings.hideFunction ) ){
+                if(
+                    $(this).hasClass('isShown')&&
+                    (($(window).outerHeight()+$('#scrollzipPoint').offset().top-settings.hideShift)<($(this).offset().top+((settings.wholeVisible)?$(this).outerHeight():0))||
+                        ($('#scrollzipPoint').offset().top+((settings.wholeVisible)?$(this).outerHeight():0))>($(this).outerHeight()+$(this).offset().top-settings.hideShift))
+                ){
+                    $(this).removeClass('isShown');
+                    settings.hideFunction.call( this );
+                }
+            }
+            return this;
+        });
+    };
+    function numberRoller(slno){
+        var min=$('.roller-title-number-'+slno).attr('data-min');
+        var max=$('.roller-title-number-'+slno).attr('data-max');
+        var timediff=$('.roller-title-number-'+slno).attr('data-delay');
+        var increment=$('.roller-title-number-'+slno).attr('data-increment');
+        var numdiff=max-min;
+        var timeout=(timediff*1000)/numdiff;
+        //if(numinc<10){
+        //increment=Math.floor((timediff*1000)/10);
+        //}//alert(increment);
+        numberRoll(slno,min,max,increment,timeout);
+
+    }
+    function numberRoll(slno,min,max,increment,timeout){//alert(slno+"="+min+"="+max+"="+increment+"="+timeout);
+        if(min<=max){
+            $('.roller-title-number-'+slno).html(min);
+            min=parseInt(min)+parseInt(increment);
+            setTimeout(function(){numberRoll(eval(slno),eval(min),eval(max),eval(increment),eval(timeout))},timeout);
+        }else{
+            $('.roller-title-number-'+slno).html(max);
+        }
+    }
+})(jQuery);
+;(function () {
+        var isScrolling = false;
+
+        window.addEventListener("scroll", throttleScroll, false);
+
+        function throttleScroll(e) {
+            if (isScrolling == false) {
+                window.requestAnimationFrame(function() {
+                    scrolling(e);
+                    isScrolling = false;
+                });
+            }
+            isScrolling = true;
+        }
+
+        document.addEventListener("DOMContentLoaded", scrolling, false);
+
+        var range_status = document.querySelector("#range_status");
+        var svg = $(".city__item_rate svg");
+        var elipse = $(".elipse");
+
+        function scrolling(e) {
+
+            if (isFullyVisible(range_status)) {
+                $(range_status).animate({
+                    width: "35%"
+                }, 1500 );
+            }
+
+
+            jQuery.each(elipse,function(i,val){
+                if (isFullyVisible(val)) {
+                    $(val).animate({
+                        height: $(val).data("height")
+                    }, 3500 );
+                }
+            });
+        }
+
+        function isFullyVisible(el) {
+            var elementBoundary = el.getBoundingClientRect();
+
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+
+            return ((top >= 0) && (bottom <= window.innerHeight));
+        }
+})();

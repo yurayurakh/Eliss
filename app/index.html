@@ -8,6 +8,13 @@
     <title>Eliss</title>
 
 
+    <!-- Map Style -->
+
+    <link rel="stylesheet" href="lib/manifest-map/dist/jqvmap.min.css">
+
+    <!-- Animate css -->
+    <link rel="stylesheet" href="lib/animate.css/animate.min.css">
+
     <!-- Normalize -->
     <link rel="stylesheet" href="lib/normalize-css/normalize.css">
 
@@ -69,10 +76,179 @@
                 <h2 class="main-sub_title">
                     Покупайте токены и получайте <span>3% прибыли в день</span>
                 </h2>
+                <div class="range">
+                    <div class="range__crypt">
+                        <div class="crypt__item">
+                            <div class="crypt__item_title">
+                                Ethereum
+                            </div>
+                            <div class="crypt__item_quantity">
+                                <img src="img/eth.png" alt="Ethereum">
+                                <span>3 000,000</span>
+                            </div>
+                        </div>
+                        <div class="crypt__item">
+                            <div class="crypt__item_title">
+                                Bitcoin
+                            </div>
+                            <div class="crypt__item_quantity">
+                                <img src="img/btc.png" alt="Bitcoin">
+                                <span>3 000,000</span>
+                            </div>
+                        </div>
+                        <div class="crypt__item">
+                            <div class="crypt__item_title">
+                                Litecoin
+                            </div>
+                            <div class="crypt__item_quantity">
+                                <img src="img/ltc.png" alt="ltc">
+                                <span>3 000,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="range__progress">
+                        <div class="progress__bar">
+                            <div class="progress__bar_now" id="range_status">
+                                <div class="progress__text">
+                                    Собрано $500 000
+                                </div>
+                            </div>
+                            <div class="progress__bar_left">
+                                <div class="progress__text">
+                                    Осталось собрать $4 500 000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="range__scale">
+                        <div class="scale__item">
+                            <div class="scale__item_money">
+                                $0
+                            </div>
+                            <div class="scale__item_rate">
+                                2,0%
+                            </div>
+                        </div>
+                        <div class="scale__item">
+                            <div class="scale__item_money">
+                                $250 000
+                            </div>
+                            <div class="scale__item_rate">
+                                2,5%
+                            </div>
+                        </div>
+                        <div class="scale__item">
+                            <div class="scale__item_money">
+                                $500 000
+                            </div>
+                            <div class="scale__item_rate">
+                                3,0%
+                            </div>
+                        </div>
+                        <div class="scale__item no-active">
+                            <div class="scale__item_money">
+                                $750 000
+                            </div>
+                            <div class="scale__item_rate">
+                                3,5%
+                            </div>
+                        </div>
+                        <div class="scale__item no-active">
+                            <div class="scale__item_money">
+                                $1 000 000
+                            </div>
+                            <div class="scale__item_rate">
+                                4,0%
+                            </div>
+                        </div>
+                        <div class="scale__item no-active">
+                            <div class="scale__item_money">
+                                $2 500 000
+                            </div>
+                            <div class="scale__item_rate">
+                                4,5%
+                            </div>
+                        </div>
+                        <div class="scale__item no-active">
+                            <div class="scale__item_money">
+                                $5 000 000
+                            </div>
+                            <div class="scale__item_rate">
+                                5,0%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="particles-js" class="partical"></div>
                 <div class="world">
-                    <canvas class="canvas"></canvas>
                     <div class="world-planet">
-                        <img src="img/planet.png" alt="planet">
+                        <img src="img/planet.png" class="world-planet__img" alt="planet">
+                        <div class="farmer">
+                            <div class="farmer__text">
+                                более
+                                <p class='numscroller' data-min='1' data-max='200000' data-delay='3.5' data-increment='1525'>
+                                    100
+                                </p>
+                                BITCOIN ферм по <br/>
+                                всему миру
+                            </div>
+                        </div>
+                        <div class="city__list">
+                            <div class="city__item china">
+                                <div class="city__item_rate">
+                                    <div class="elipse" data-height="47px"></div>
+                                    <i class='numscroller' data-min='1' data-max='40' data-delay='4' data-increment='2'>40</i><span>%</span>
+                                </div>
+                                <div class="city__item_text">
+                                    Китай
+                                </div>
+                            </div>
+                            <div class="city__item japan">
+                                <div class="city__item_rate">
+                                    <div class="elipse" data-height="22px"></div>
+                                    <i class='numscroller' data-min='1' data-max='23' data-delay='4' data-increment='2'>23</i><span>%</span>
+                                </div>
+                                <div class="city__item_text">
+                                    Япония
+                                </div>
+                            </div>
+                            <div class="city__item india">
+                                <div class="city__item_rate">
+                                    <div class="elipse" data-height="15px"></div>
+                                    <i class='numscroller' data-min='1' data-max='14' data-delay='4' data-increment='2'>14</i><span>%</span>
+                                </div>
+                                <div class="city__item_text">
+                                    Индия
+                                </div>
+                            </div>
+                            <div class="city__item usa">
+                                <div class="city__item_rate">
+                                    <div class="elipse" data-height="12px"></div>
+                                    <i class='numscroller' data-min='1' data-max='12' data-delay='4' data-increment='2'>12</i><span>%</span>
+                                </div>
+                                <div class="city__item_text">
+                                    США
+                                </div>
+                            </div>
+                            <div class="city__item germany">
+                                <div class="city__item_rate">
+                                    <div class="elipse" data-height="10px"></div>
+                                    <i class='numscroller' data-min='1' data-max='7' data-delay='4' data-increment='2'>7</i><span>%</span>
+                                </div>
+                                <div class="city__item_text">
+                                    Германия
+                                </div>
+                            </div>
+                            <div class="city__item other">
+                                <div class="city__item_rate">
+                                    <div class="elipse" data-height="8px"></div>
+                                    <i class='numscroller' data-min='1' data-max='4' data-delay='3' data-increment='1'>4</i><span>%</span>
+                                </div>
+                                <div class="city__item_text">
+                                    Другие
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="world-info">
                         <div class="title-block">
@@ -104,7 +280,7 @@
             <div class="container">
                 <div class="title-block">
                     <h2>
-                       Искусственный интеллект<span>обучается сам</span>
+                       Искусственный интеллект<span> обучается сам</span>
                     </h2>
                 </div>
                 <div class="information-block home__information-brain">
@@ -139,6 +315,7 @@
             </div>
         </div>
         <div class="dark-section home__ico">
+            <div id="particles-js2" class="partical"></div>
             <div class="container">
                 <div class="title-block">
                     <h2>
@@ -151,7 +328,7 @@
                     </div>
                 </div>
                 <div class="ico__list">
-                    <div class="ico__item">
+                    <div class="ico__item wow fadeInUp" data-wow-delay="0.3s" data-wow-offset="10">
                         <div class="ico__item_img">
                             <img src="img/ico-lamp.png" alt="ico-lamp">
                         </div>
@@ -164,7 +341,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ico__item">
+                    <div class="ico__item wow fadeInUp" data-wow-delay="0.3s" data-wow-offset="10">
                         <div class="ico__item_img">
                             <img src="img/ico-bitcoin.png" alt="ico-bitcoin">
                         </div>
@@ -177,7 +354,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ico__item">
+                    <div class="ico__item wow fadeInUp" data-wow-delay="0.3s" data-wow-offset="10">
                         <div class="ico__item_img">
                             <img src="img/ico-encryption.png" alt="ico-encryption">
                         </div>
@@ -190,7 +367,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ico__item">
+                    <div class="ico__item wow fadeInUp" data-wow-delay="0.4s" data-wow-offset="10">
                         <div class="ico__item_img">
                             <img src="img/ico-develop.png" alt="ico-develop">
                         </div>
@@ -203,7 +380,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ico__item">
+                    <div class="ico__item wow fadeInUp" data-wow-delay="0.4s" data-wow-offset="10">
                         <div class="ico__item_img">
                             <img src="img/ico-shield.png" alt="ico-shield.png">
                         </div>
@@ -216,7 +393,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ico__item">
+                    <div class="ico__item wow fadeInUp" data-wow-delay="0.4s" data-wow-offset="10">
                         <div class="ico__item_img">
                             <img src="img/ico-auction.png" alt="ico-auction">
                         </div>
@@ -229,7 +406,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ico__item">
+                    <div class="ico__item wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="10">
                         <div class="ico__item_img">
                             <img src="img/ico-X10.png" alt="ico-X10">
                         </div>
@@ -242,7 +419,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ico__item">
+                    <div class="ico__item wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="10">
                         <div class="ico__item_img">
                             <img src="img/ico-bars.png" alt="ico-bars">
                         </div>
@@ -255,7 +432,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ico__item">
+                    <div class="ico__item wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="10">
                         <div class="ico__item_img">
                             <img src="img/ico-software.png" alt="ico-software">
                         </div>
@@ -316,7 +493,7 @@
                         </div>
                     </div>
                     <div class="cart__list">
-                        <div class="cart__item">
+                        <div class="cart__item wow fadeInLeft" data-wow-delay="0.2s" data-wow-offset="30">
                             <div class="cart__item_img">
                                 <img src="img/cart-3%25.png" alt="cart-3%">
                             </div>
@@ -328,7 +505,7 @@
                                 Вы получаете <span>ежедневную</span> прибыль в размере <span>3%</span> от ваших инвестиций.
                             </div>
                         </div>
-                        <div class="cart__item">
+                        <div class="cart__item wow fadeInUp" data-wow-delay="0.2s" data-wow-offset="10">
                             <div class="cart__item_img">
                                 <img src="img/cart-bitcoin1.png" alt="cart-bitcoin1">
                             </div>
@@ -340,7 +517,7 @@
                                 Вы <span>в любой момент</span> можете <span>выйти из крауд сейла,</span> продав ваши токены.
                             </div>
                         </div>
-                        <div class="cart__item">
+                        <div class="cart__item wow fadeInRight" data-wow-delay="0.2s" data-wow-offset="30">
                             <div class="cart__item_img">
                                 <img src="img/cart-incentive.png" alt="cart-incentive">
                             </div>
@@ -361,11 +538,10 @@
                         Road map
                     </h2>
                 </div>
-                <div class="map">
-                    <img src="img/map.png" alt="map">
+                <div class="map" id="vmap" style="width: 100%; height: 400px;">
                 </div>
                 <div class="map__list">
-                    <div class="map__item">
+                    <div class="map__item circle__item step__active wow fadeInLeft" data-step="step1" data-wow-delay="0" data-wow-offset="10">
                         <div class="map__item_icon">
                             <img src="img/map_point.png" alt="map_point">
                         </div>
@@ -380,9 +556,10 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="map__item">
-                        <div class="map__item_icon">
+                    <div class="map__item circle__item wow fadeInLeft" data-step="step2" data-wow-delay="0.5s" data-wow-offset="10">
+                        <div class="map__item_icon circle circle-one">
                             <img src="img/map_point.png" alt="map_point">
+                            <div class="circle__around"><span></span></div>
                         </div>
                         <div class="map__item_title">
                             4Q 2017
@@ -395,22 +572,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="map__item">
-                        <div class="map__item_icon">
-                            <img src="img/map_point.png" alt="map_point">
-                        </div>
-                        <div class="map__item_title">
-                            3Q 2017
-                        </div>
-                        <div class="map__item_text">
-                            <ul>
-                                <li>- Идея о создании проекта ELISS</li>
-                                <li>- Анализ рынка на имеющиеся аналоги</li>
-                                <li>- Выявление недостатков и плюсов проекта</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="map__item">
+                    <div class="map__item circle__item wow fadeInLeft" data-step="step3" data-wow-delay="1.0s" data-wow-offset="10">
                         <div class="map__item_icon circle circle-one">
                             <img src="img/map_point.png" alt="map_point">
                             <div class="circle__around"><span></span></div>
@@ -426,7 +588,23 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="map__item">
+                    <div class="map__item circle__item wow fadeInLeft" data-step="step4" data-wow-delay="1.5s" data-wow-offset="10">
+                        <div class="map__item_icon circle circle-one">
+                            <img src="img/map_point.png" alt="map_point">
+                            <div class="circle__around"><span></span></div>
+                        </div>
+                        <div class="map__item_title">
+                            3Q 2017
+                        </div>
+                        <div class="map__item_text">
+                            <ul>
+                                <li>- Идея о создании проекта ELISS</li>
+                                <li>- Анализ рынка на имеющиеся аналоги</li>
+                                <li>- Выявление недостатков и плюсов проекта</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="map__item circle__item wow fadeInLeft" data-step="step5" data-wow-delay="2.0s" data-wow-offset="10">
                         <div class="map__item_icon circle-two circle">
                             <img src="img/map_point.png" alt="map_point">
                             <div class="circle__around"><span></span></div>
@@ -442,7 +620,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="map__item">
+                    <div class="map__item circle__item wow fadeInLeft" data-step="step6" data-wow-delay="2.5s" data-wow-offset="10">
                         <div class="map__item_icon circle-three circle">
                             <img src="img/map_point.png" alt="map_point">
                             <div class="circle__around"><span></span></div>
@@ -458,7 +636,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="map__item">
+                    <div class="map__item circle__item wow fadeInLeft" data-step="step7" data-wow-delay="3s" data-wow-offset="10">
                         <div class="map__item_icon circle circle-four">
                             <img src="img/map_point.png" alt="map_point">
                             <div class="circle__around"><span></span></div>
@@ -478,6 +656,7 @@
             </div>
         </div>
         <div class="dark-section investor">
+            <div id="particles-js3" class="partical"></div>
             <div class="container">
                 <div class="title-block">
                     <h2>
@@ -496,7 +675,7 @@
                     </div>
                     <div class="information-block__text information-block__btn">
                         <a href="" class="btn">
-                            стать инвестором
+                            активировать eliss
                         </a>
                     </div>
                 </div>
@@ -517,7 +696,7 @@
                         </div>
                     </div>
                     <div class="partner_us">
-                        <div class="partner__item partner_you">
+                        <div class="partner__item partner_you wow fadeInLeft" data-wow-delay="0s" data-wow-offset="30">
                             <div class="partner__item_img">
                                 <img src="img/partner_you.png" alt="partner_you">
                             </div>
@@ -525,7 +704,7 @@
                                 ВЫ
                             </div>
                         </div>
-                        <div class="partner__item partner_profit">
+                        <div class="partner__item partner_profit wow fadeInDown" data-wow-delay="0.5s" data-wow-offset="10">
                             <div class="partner__item_img">
                                 <img src="img/profit.png" alt="profit">
                             </div>
@@ -537,7 +716,7 @@
                                 инвестиции
                             </div>
                         </div>
-                        <div class="partner__item partner_your">
+                        <div class="partner__item partner_your wow fadeInRight" data-wow-delay="1s" data-wow-offset="30">
                             <div class="partner__item_img">
                                 <img src="img/partner_your.png" alt="partner_your">
                             </div>
@@ -679,5 +858,32 @@
     <!-- Scripts -->
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="js/common.js"></script>
+
+    <!-- Wow js -->
+    <script src="lib/wow/dist/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- Particles js-->
+    <script src="lib/particles.js/particles.js"></script>
+    <script>
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        var scr_w=screen.width;
+        if (scr_w > 1366) {
+            particlesJS.load('particles-js', '/lib/particles.js/particles.json');
+        }
+
+        particlesJS.load('particles-js2', '/lib/particles.js/particles.json');
+
+        particlesJS.load('particles-js3', '/lib/particles.js/particles.json');
+    </script>
+
+    <!-- Map -->
+    <script src="lib/manifest-map/dist/jquery.vmap.min.js"></script>
+    <script src="lib/manifest-map/dist/maps/jquery.vmap.world.js"></script>
+    <script src="lib/manifest-map/dist/maps/continents/jquery.vmap.europe.js"></script>
+    <script src="lib/manifest-map/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="lib/manifest-map/date.js"></script>
 </body>
 </html>
