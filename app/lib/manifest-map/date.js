@@ -1776,17 +1776,42 @@
         }
     };
 
-    $("#jqvmap1_de").attr("fill","#d341ad");
 
-    $(".map__item").hover(function(e){
+    var step_action = $(".map__item").eq(1).data("step");
+
+    jQuery.each(eval(step_action).paths,function(i,val){
+        $("#jqvmap1_"+i).attr("fill","#d341ad");
+    });
+
+
+    $(".map__item").on('mouseover', function(e){
 
         var step = $(this).data("step");
 
         jQuery.each(eval(step).paths,function(i,val){
             $("#jqvmap1_"+i).attr("fill","#d341ad");
         });
-        $(this).addClass("step__active");
-        $(this).find(".map__item_icon").removeClass("circle circle-four").find("span").hide();
+
     });
+
+
+    $(".map__item").on('mouseout', function(){
+
+        if(!$(this).hasClass('step__start')){
+
+            jQuery.each(step7.paths,function(i,val){
+                var oroginal_color = $("#jqvmap1_"+i).attr("original");
+                $("#jqvmap1_"+i).attr("fill",oroginal_color);
+            });
+
+            var step_action = $(".map__item").eq(1).data("step");
+
+            jQuery.each(eval(step_action).paths,function(i,val){
+                $("#jqvmap1_"+i).attr("fill","#d341ad");
+            });
+
+        }
+    });
+
 
 })();

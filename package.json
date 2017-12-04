@@ -1,16 +1,24 @@
 {
   "name": "eliss",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Front part in the branch front",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurayurakh/Eliss.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yurayurakh/Eliss/issues"
+  },
+  "homepage": "https://github.com/yurayurakh/Eliss#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^3.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^2.3.0",
     "gulp-connect": "^5.0.0",
@@ -18,6 +26,5 @@
     "gulp-minify": "^2.1.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-sass": "^3.1.0"
-  },
-  "dependencies": {}
+  }
 }

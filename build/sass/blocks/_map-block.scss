@@ -10,6 +10,7 @@
     justify-content: center;
 
     .map__item {
+      opacity: .5;
       cursor: pointer;
       width: 160px;
       margin-left: 20px;
@@ -27,6 +28,10 @@
           height: 3px;
           width: 100px;
           background: $gradient;
+        }
+        span {
+          opacity: 1;
+
         }
       }
       &_title {
@@ -53,13 +58,17 @@
       }
       .circle {
         img {
-          display: none;
+          position: relative;
+          opacity: 0;
+          z-index: 999;
+          width: 0;
+          height: 0;
         }
         &__around {
           text-align: center;
           vertical-align: bottom;
           display: inline-block;
-          position: relative;
+          //position: relative;
           font-size: 0;
           span {
             font-size: 0;
@@ -67,7 +76,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
+            //right: 0;
             bottom: 0;
             margin: auto;
             display: inline-block;
@@ -100,6 +109,7 @@
           }
         }
         &:after {
+          opacity: 0.7;
           background: #e6e6e6;
         }
       }
@@ -143,12 +153,25 @@
           &:before {
             width: 47px;
             height: 47px;
-
           }
         }
       }
       &:hover {
+        //transition: opacity .8s ease;
         opacity: 1;
+        .map__item_icon {
+          span {
+            transition: all .6s ease;
+            opacity: 1;
+            left: -14px;
+            width: 65px;
+            height: 65px;
+            &:before {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
       }
     }
     .circle__item {
@@ -156,6 +179,9 @@
     }
     .step__active {
       opacity: 1;
+    }
+    .step__start {
+      opacity: 1 !important;
     }
   }
 }

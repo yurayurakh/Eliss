@@ -79,7 +79,7 @@
   &:hover {
     transition: all .5s ease;
     color: $font_color;
-    background-color: darken(#ffffff, 25%);
+    background-color: #ffffff;
     &:before {
       background: url("../img/icon/icon_pdf2.png") center no-repeat;
     }

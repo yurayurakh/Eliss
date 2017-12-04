@@ -69,6 +69,8 @@
     <!-- Main content -->
     <div class="main-content">
         <div class="what_eliss-section">
+            <div id="particles-js" class="partical_wrap partical_left"></div>
+            <div id="particles-js2" class="partical_wrap partical_right"></div>
             <div class="container">
                 <h1 class="main-title">
                     ELISS
@@ -179,99 +181,98 @@
                         </div>
                     </div>
                 </div>
-                <div id="particles-js" class="partical"></div>
-                <div class="world">
-                    <div class="world-planet">
-                        <img src="img/planet.png" class="world-planet__img" alt="planet">
-                        <div class="farmer">
-                            <div class="farmer__text">
-                                более
-                                <p class='numscroller' data-min='1' data-max='200000' data-delay='3.5' data-increment='1525'>
-                                    100
-                                </p>
-                                BITCOIN ферм по <br/>
-                                всему миру
+            </div>
+            <div class="world">
+                <div class="world-planet">
+                    <img src="img/planet.png" class="world-planet__img" alt="planet">
+                    <div class="farmer">
+                        <div class="farmer__text">
+                            более
+                            <p class='numscroller' data-min='1' data-max='200000' data-delay='3.5' data-increment='1525'>
+                                100
+                            </p>
+                            BITCOIN ферм по <br/>
+                            всему миру
+                        </div>
+                    </div>
+                    <div class="city__list">
+                        <div class="city__item china">
+                            <div class="city__item_rate">
+                                <div class="elipse" data-height="47px"></div>
+                                <i class='numscroller' data-min='1' data-max='40' data-delay='4' data-increment='2'>40</i><span>%</span>
+                            </div>
+                            <div class="city__item_text">
+                                Китай
                             </div>
                         </div>
-                        <div class="city__list">
-                            <div class="city__item china">
-                                <div class="city__item_rate">
-                                    <div class="elipse" data-height="47px"></div>
-                                    <i class='numscroller' data-min='1' data-max='40' data-delay='4' data-increment='2'>40</i><span>%</span>
-                                </div>
-                                <div class="city__item_text">
-                                    Китай
-                                </div>
+                        <div class="city__item japan">
+                            <div class="city__item_rate">
+                                <div class="elipse" data-height="22px"></div>
+                                <i class='numscroller' data-min='1' data-max='23' data-delay='4' data-increment='2'>23</i><span>%</span>
                             </div>
-                            <div class="city__item japan">
-                                <div class="city__item_rate">
-                                    <div class="elipse" data-height="22px"></div>
-                                    <i class='numscroller' data-min='1' data-max='23' data-delay='4' data-increment='2'>23</i><span>%</span>
-                                </div>
-                                <div class="city__item_text">
-                                    Япония
-                                </div>
+                            <div class="city__item_text">
+                                Япония
                             </div>
-                            <div class="city__item india">
-                                <div class="city__item_rate">
-                                    <div class="elipse" data-height="15px"></div>
-                                    <i class='numscroller' data-min='1' data-max='14' data-delay='4' data-increment='2'>14</i><span>%</span>
-                                </div>
-                                <div class="city__item_text">
-                                    Индия
-                                </div>
+                        </div>
+                        <div class="city__item india">
+                            <div class="city__item_rate">
+                                <div class="elipse" data-height="15px"></div>
+                                <i class='numscroller' data-min='1' data-max='14' data-delay='4' data-increment='2'>14</i><span>%</span>
                             </div>
-                            <div class="city__item usa">
-                                <div class="city__item_rate">
-                                    <div class="elipse" data-height="12px"></div>
-                                    <i class='numscroller' data-min='1' data-max='12' data-delay='4' data-increment='2'>12</i><span>%</span>
-                                </div>
-                                <div class="city__item_text">
-                                    США
-                                </div>
+                            <div class="city__item_text">
+                                Индия
                             </div>
-                            <div class="city__item germany">
-                                <div class="city__item_rate">
-                                    <div class="elipse" data-height="10px"></div>
-                                    <i class='numscroller' data-min='1' data-max='7' data-delay='4' data-increment='2'>7</i><span>%</span>
-                                </div>
-                                <div class="city__item_text">
-                                    Германия
-                                </div>
+                        </div>
+                        <div class="city__item usa">
+                            <div class="city__item_rate">
+                                <div class="elipse" data-height="12px"></div>
+                                <i class='numscroller' data-min='1' data-max='12' data-delay='4' data-increment='2'>12</i><span>%</span>
                             </div>
-                            <div class="city__item other">
-                                <div class="city__item_rate">
-                                    <div class="elipse" data-height="8px"></div>
-                                    <i class='numscroller' data-min='1' data-max='4' data-delay='3' data-increment='1'>4</i><span>%</span>
-                                </div>
-                                <div class="city__item_text">
-                                    Другие
-                                </div>
+                            <div class="city__item_text">
+                                США
+                            </div>
+                        </div>
+                        <div class="city__item germany">
+                            <div class="city__item_rate">
+                                <div class="elipse" data-height="10px"></div>
+                                <i class='numscroller' data-min='1' data-max='7' data-delay='4' data-increment='2'>7</i><span>%</span>
+                            </div>
+                            <div class="city__item_text">
+                                Германия
+                            </div>
+                        </div>
+                        <div class="city__item other">
+                            <div class="city__item_rate">
+                                <div class="elipse" data-height="8px"></div>
+                                <i class='numscroller' data-min='1' data-max='4' data-delay='3' data-increment='1'>4</i><span>%</span>
+                            </div>
+                            <div class="city__item_text">
+                                Другие
                             </div>
                         </div>
                     </div>
-                    <div class="world-info">
-                        <div class="title-block">
-                            <h2>
-                                <span>Что такое </span>ELISS
-                            </h2>
+                </div>
+                <div class="world-info">
+                    <div class="title-block">
+                        <h2>
+                            <span>Что такое </span>ELISS
+                        </h2>
+                    </div>
+                    <div class="information-block">
+                        <div class="information-block__text">
+                            <p>
+                                ELISS (Energy-Low Intellectual Security System) - это система защиты электронных данных и информации построенная на Blockchain.                            </p>
+                            <p>
+                                Благодаря использованию технологий Machine Learning и совокупности инструментов обработки информации Big Data., данная система не только защищает данные, но и позволяет избавится от нужды установки антивирусов и других защитных систем, которые потребляют большое количество ресурсов и ненадежны.
+                            </p>
+                            <p>
+                                ELISS на данный момент уже работает с крипто биржами и крупными майнинг фермами, и получает процент от их прибыли, что позволяет проекту выплачивать ежедневные дивиденды держателям токенов LIS в размере 3%.
+                            </p>
                         </div>
-                        <div class="information-block">
-                            <div class="information-block__text">
-                                <p>
-                                    ELISS (Energy-Low Intellectual Security System) - это система защиты электронных данных и информации построенная на Blockchain.                            </p>
-                                <p>
-                                    Благодаря использованию технологий Machine Learning и совокупности инструментов обработки информации Big Data., данная система не только защищает данные, но и позволяет избавится от нужды установки антивирусов и других защитных систем, которые потребляют большое количество ресурсов и ненадежны.
-                                </p>
-                                <p>
-                                    ELISS на данный момент уже работает с крипто биржами и крупными майнинг фермами, и получает процент от их прибыли, что позволяет проекту выплачивать ежедневные дивиденды держателям токенов LIS в размере 3%.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="world-btn">
-                            <a href="" class="btn">Join the sale</a>
-                            <a href="" class="btn-transparent btn-download">White paper</a>
-                        </div>
+                    </div>
+                    <div class="world-btn">
+                        <a href="" class="btn">Join the sale</a>
+                        <a href="" class="btn-transparent btn-download">White paper</a>
                     </div>
                 </div>
             </div>
@@ -315,7 +316,8 @@
             </div>
         </div>
         <div class="dark-section home__ico">
-            <div id="particles-js2" class="partical"></div>
+            <div id="particles-js3" class="partical_wrap partical_left"></div>
+            <div id="particles-js4" class="partical_wrap partical_right"></div>
             <div class="container">
                 <div class="title-block">
                     <h2>
@@ -541,7 +543,7 @@
                 <div class="map" id="vmap" style="width: 100%; height: 400px;">
                 </div>
                 <div class="map__list">
-                    <div class="map__item circle__item step__active wow fadeInLeft" data-step="step1" data-wow-delay="0" data-wow-offset="10">
+                    <div class="map__item circle__item step__start wow fadeInLeft" data-step="step1" data-wow-delay="0" data-wow-offset="10">
                         <div class="map__item_icon">
                             <img src="img/map_point.png" alt="map_point">
                         </div>
@@ -556,10 +558,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="map__item circle__item wow fadeInLeft" data-step="step2" data-wow-delay="0.5s" data-wow-offset="10">
-                        <div class="map__item_icon circle circle-one">
+                    <div class="map__item circle__item step__start wow fadeInLeft" data-step="step2" data-wow-delay="0.5s" data-wow-offset="10">
+                        <div class="map__item_icon">
                             <img src="img/map_point.png" alt="map_point">
-                            <div class="circle__around"><span></span></div>
                         </div>
                         <div class="map__item_title">
                             4Q 2017
@@ -605,7 +606,7 @@
                         </div>
                     </div>
                     <div class="map__item circle__item wow fadeInLeft" data-step="step5" data-wow-delay="2.0s" data-wow-offset="10">
-                        <div class="map__item_icon circle-two circle">
+                        <div class="map__item_icon circle-one circle">
                             <img src="img/map_point.png" alt="map_point">
                             <div class="circle__around"><span></span></div>
                         </div>
@@ -621,7 +622,7 @@
                         </div>
                     </div>
                     <div class="map__item circle__item wow fadeInLeft" data-step="step6" data-wow-delay="2.5s" data-wow-offset="10">
-                        <div class="map__item_icon circle-three circle">
+                        <div class="map__item_icon circle-one circle">
                             <img src="img/map_point.png" alt="map_point">
                             <div class="circle__around"><span></span></div>
                         </div>
@@ -637,7 +638,7 @@
                         </div>
                     </div>
                     <div class="map__item circle__item wow fadeInLeft" data-step="step7" data-wow-delay="3s" data-wow-offset="10">
-                        <div class="map__item_icon circle circle-four">
+                        <div class="map__item_icon circle circle-one">
                             <img src="img/map_point.png" alt="map_point">
                             <div class="circle__around"><span></span></div>
                         </div>
@@ -656,7 +657,8 @@
             </div>
         </div>
         <div class="dark-section investor">
-            <div id="particles-js3" class="partical"></div>
+            <div id="particles-js5" class="partical_wrap partical_left"></div>
+            <div id="particles-js6" class="partical_wrap partical_right"></div>
             <div class="container">
                 <div class="title-block">
                     <h2>
@@ -707,6 +709,7 @@
                         <div class="partner__item partner_profit wow fadeInDown" data-wow-delay="0.5s" data-wow-offset="10">
                             <div class="partner__item_img">
                                 <img src="img/profit.png" alt="profit">
+                                <img src="img/profit2.png" class="animate-circle" alt="profit2">
                             </div>
                             <div class="partner__item_title">
                                 Прибыль 10%
@@ -872,11 +875,13 @@
         var scr_w=screen.width;
         if (scr_w > 1366) {
             particlesJS.load('particles-js', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js2', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js3', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js4', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js5', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js6', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js6', '/lib/particles.js/particles.json');
         }
-
-        particlesJS.load('particles-js2', '/lib/particles.js/particles.json');
-
-        particlesJS.load('particles-js3', '/lib/particles.js/particles.json');
     </script>
 
     <!-- Map -->

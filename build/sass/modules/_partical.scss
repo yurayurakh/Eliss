@@ -1,3 +1,18 @@
+.partical_wrap {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  height: 1000px;
+}
+
+.partical_left {
+  left: 0;
+}
+
+.partical_right {
+  right: 0;
+}
+
 .partical {
   width: 100%;
   left: 0;
@@ -10,4 +25,9 @@
     top: 0;
     bottom: 0;
   }
+}
+
+
+#particles-js5, #particles-js6 {
+  height: 676px;
 }

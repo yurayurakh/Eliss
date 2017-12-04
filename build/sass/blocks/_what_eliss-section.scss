@@ -25,8 +25,9 @@
   }
   .world {
     padding-bottom: 110px;
-    background: #1c1c1e;
+    background: url("../img/bg_dark-section.png") center no-repeat;
     position: relative;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     .canvas {
