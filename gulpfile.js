@@ -15,7 +15,7 @@ var minifyjs = require('gulp-minify');
 gulp.task('scripts', function() {
     return gulp.src('build/js/*.js')
         .pipe(concatjs('common.js'))
-        .pipe(minifyjs(''))
+        //.pipe(minifyjs(''))
         .pipe(gulp.dest('app/js/'))
         .pipe(connect.reload());
 });

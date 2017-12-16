@@ -20,15 +20,309 @@
   }
 }
 
-@media (min-width:1200px) and (max-width:1439px) {
-
-}
 @media (min-width:992px) and (max-width:1199px) {
+
+  //header
+
+  //Home page
+  .what_eliss-section .world-info .title-block {
+    margin-top: 40px;
+  }
+
+  .ico__list {
+    justify-content: space-around;
+  }
+
+  //Investor page
+  .investor__steps .investor__step_img {
+    height: 250px;
+  }
+
+  .investor__steps .investor__step_detail {
+    max-width: 100%;
+  }
+
+
+  //footer
+
+  //module
+  .partical_wrap {
+    display: none;
+  }
 
 }
 @media (min-width:768px) and (max-width:991px) {
+  //header
 
+  //Home page
+  .what_eliss-section {
+    padding-top: 130px;
+  }
+
+  .what_eliss-section .main-sub_title {
+    margin-bottom: 100px;
+  }
+
+  .what_eliss-section .world-info .title-block {
+    margin-top: 40px;
+  }
+
+  .information-block {
+    flex-wrap: wrap;
+  }
+
+  .home__information-brain .information-block__img {
+    margin: 0 auto;
+  }
+
+  .home__information-why-work .information-block__text {
+    margin: 0 0 60px 0;
+    text-align: center;
+  }
+
+  .home__information-why-work .information-block__img {
+    margin: 0 auto;
+  }
+
+  .ico__list {
+    justify-content: space-around;
+  }
+
+  .map-block .map__list {
+    flex-wrap: wrap;
+    .map__item {
+      margin-bottom: 40px;
+    }
+  }
+
+  .investor .information-block__text {
+    text-align: center;
+    margin: 0 auto 40px;
+    width: 100%;
+  }
+
+  .partner {
+    background: url(../img/bg_wave.png) center 435px no-repeat;
+  }
+
+
+  //Investor page
+  .investor__steps .investor__step_img {
+    height: 250px;
+  }
+
+  .investor__steps .investor__step_detail {
+    max-width: 100%;
+  }
+
+  //footer
+  .footer .brands {
+    justify-content: space-around;
+  }
+
+  .footer .news .subscribe {
+    margin-bottom: 40px;
+  }
+
+  .footer .news .subscribe .information-block {
+    text-align: center;
+  }
+
+  .footer .news .subscribe-form {
+    justify-content: center;
+  }
+
+
+  //module
+  .partical_wrap {
+    display: none;
+  }
 } 
 @media (max-width:767px) {
+  //header
 
+  //Home page
+  .what_eliss-section {
+    padding-top: 130px;
+  }
+
+  .range {
+    display: none;
+  }
+
+  .what_eliss-section .main-sub_title {
+    margin-bottom: 60px;
+  }
+
+  .what_eliss-section .world-planet {
+    display: none;
+  }
+
+  .what_eliss-section .world-info {
+    padding: 0 10px;
+    .title-block {
+      margin-top: 40px;
+    }
+  }
+
+  .what_eliss-section .world-info .world-btn {
+    justify-content: center;
+    a {
+      margin: 20px 0;
+    }
+  }
+
+  .information-block {
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .home__information-brain .information-block__img {
+    margin: 0 auto;
+  }
+
+  .home__information-why-work .information-block__text {
+    margin: 0 0 60px 0;
+    text-align: center;
+  }
+
+  .home__information-why-work .information-block__img {
+    margin: 0 auto;
+  }
+
+  .ico__list {
+    justify-content: space-around;
+  }
+
+  .review__list {
+    padding: 0;
+  }
+
+  .map-block .map {
+    margin: 0;
+  }
+
+  .map-block .map__list {
+    flex-wrap: wrap;
+    .map__item {
+      width: 280px;
+      margin: 0 auto 40px;
+      &_icon:after {
+        width: 200px;
+        left: 50px;
+      }
+    }
+  }
+
+  .investor .information-block__text {
+    text-align: center;
+    margin: 0 auto 40px;
+    width: 100%;
+  }
+
+  .partner {
+    background: none;
+    .partner-wave {
+      padding: 0;
+      .partner_us {
+       display: none;
+      }
+    }
+  }
+
+  // Contact page
+  .contact__list .contact__item {
+    max-width: 100%;
+  }
+
+  .contact__list .contact__item_title {
+    letter-spacing: normal;
+  }
+
+  //Faq page
+  .question__list {
+    padding: 0;
+  }
+
+  //Investor page
+  .investor__steps {
+    padding: 0;
+  }
+
+  .investor__steps .investor__step_img {
+    height: 250px;
+  }
+
+  .investor__steps .investor__step_detail {
+    max-width: 100%;
+  }
+
+  //footer
+  .footer .brands {
+    justify-content: space-around;
+  }
+
+  .footer .news .subscribe {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .footer .news .subscribe .information-block {
+    text-align: center;
+  }
+
+  .footer .news .subscribe-form {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer .news .subscribe-form__field {
+    margin-bottom: 20px;
+  }
+
+  .footer .news .subscribe-form__input {
+    width: 100%;
+  }
+
+  .footer .news .social {
+    flex-wrap: wrap;
+    justify-content: center;
+    .social__item {
+      margin-bottom: 20px;
+    }
+  }
+
+
+  //module
+  .partical_wrap {
+    display: none;
+  }
+
+  .btn, .btn-transparent {
+    font-size: 12px;
+  }
+
+  .cart-block {
+    padding: 0;
+    .cart__list .cart__item {
+      max-width: 300px;
+      padding: 20px 25px;
+      &_img {
+        margin: 0 auto 20px;
+        width: 100%;
+      }
+    }
+  }
+
+  .title-block h2, .title-block h3, .title-block h4 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .dark-section, .section {
+    padding: 60px 0;
+  }
 }

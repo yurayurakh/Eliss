@@ -103,6 +103,7 @@
                         <div class="partner__item partner_profit wow fadeInDown" data-wow-delay="0.5s" data-wow-offset="10">
                             <div class="partner__item_img">
                                 <img src="img/profit.png" alt="profit">
+                                <img src="img/profit2.png" class="animate-circle" alt="profit2">
                             </div>
                             <div class="partner__item_title">
                                 Прибыль 10%
@@ -128,7 +129,8 @@
             </div>
         </div>
         <div class="dark-section investor">
-            <div id="particles-js3" class="partical"></div>
+            <div id="particles-js7" class="partical_wrap partical_left"></div>
+            <div id="particles-js8" class="partical_wrap partical_right"></div>
             <div class="container">
                 <div class="title-block">
                     <h2>
@@ -303,9 +305,19 @@
     <!-- Particles js-->
     <script src="lib/particles.js/particles.js"></script>
     <script>
-        particlesJS.load('particles-js3', '/lib/particles.js/particles.json', function() {
-            console.log('callback - particles.js config loaded');
-        });
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        var scr_w=screen.width;
+        if (scr_w > 1366) {
+            particlesJS.load('particles-js', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js2', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js3', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js4', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js5', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js6', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js6', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js7', '/lib/particles.js/particles.json');
+            particlesJS.load('particles-js8', '/lib/particles.js/particles.json');
+        }
     </script>
 
 </body>
