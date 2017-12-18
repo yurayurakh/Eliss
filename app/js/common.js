@@ -20,9 +20,28 @@ var question = (function () {
     }
 })();
 
+
+var mobileMenu = (function(){
+
+    var sandwich = function () {
+        $(".sandwich").click(function() {
+            $(".sandwich").toggleClass("active");
+            $(".header__nav").slideToggle();
+        });
+    };
+
+    return {
+        init: function () {
+            sandwich();
+        }
+    }
+
+})();
+
 (function main() {
     $(document).ready(function () {
         question.init();
+        mobileMenu.init();
     });
 })();
 

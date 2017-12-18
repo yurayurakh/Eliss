@@ -108,6 +108,9 @@
   }
   &__nav {
     margin-top: 90px;
+    .nav__list {
+      flex-wrap: wrap;
+    }
   }
   .copyright {
     margin-top: 30px;

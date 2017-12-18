@@ -1,0 +1,139 @@
+.mobile-menu {
+
+  display: none;
+
+  $w: 30px;
+  $h: 3px;
+
+  .sandwich {
+    width: $w;
+    height: $w;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 8px auto;
+  }
+
+  .sw-topper {
+    position: relative;
+    top: 0;
+    width: $w;
+    height: $h;
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    transition: transform 0.5s, top 0.2s;
+
+    /* transition-delay: 0.2s, 0s; */
+
+  }
+
+  .sw-bottom {
+    position: relative;
+    width: $w;
+    height: $h;
+    top: $h * 2;
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    transition: transform 0.5s, top 0.2s;
+    transition-delay: 0.2s, 0s;
+  }
+
+  .sw-footer {
+    position: relative;
+    width: $w;
+    height: $h;
+    top: $h *4;
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    transition: all 0.5s;
+    transition-delay: 0.1s;
+  }
+  .sandwich.active {
+    .sw-topper {
+      top: 10px;
+      transform: rotate(140deg);
+    }
+    .sw-bottom {
+      top: 7px;
+      transform: rotate(-140deg);
+    }
+    .sw-footer {
+      opacity: 0;
+      top: 0;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+
+  .header {
+    position: fixed;
+    padding: 10px 0;
+    z-index: 9999;
+  }
+
+  .hidden-mobile {
+    display: none;
+  }
+
+  .mobile-menu {
+    float: right;
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    z-index: 10;
+    position: relative;
+    background: transparent;
+    border: 1px solid $bg_color;
+    margin-right: 1em;
+    span {
+      display: block;
+    }
+  }
+
+  .header__nav {
+    position: absolute;
+    width: 100%;
+    padding-right: 0;
+    background: #242424;
+    margin-top: 50px;
+    .nav__list {
+      position: relative;
+      display: block;
+      text-align: center;
+      li {
+        display: block;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 0;
+        margin: 0;
+        &:last-child {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        a {
+          display: block;
+          padding: 15px 0;
+          &:after {
+            display: none;
+          }
+          &:hover {
+            &:after {
+              display: none;
+              width: 100%;
+              transition: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer__nav .nav__list {
+    justify-content: space-between;
+  }
+}
